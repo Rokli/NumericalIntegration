@@ -16,6 +16,7 @@ HEADERS += \
     Models/AverageRectangleMethod.h \
     Models/BasisForMethods.h \
     Models/LeftRectangleMethod.h \
+    Models/SimpleFactory.h \
     mainwindow.h
 
 FORMS += \

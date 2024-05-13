@@ -15,8 +15,15 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    addText("Средние: " + QString::number(average.Calculate(0.5,4.5,1000)));
-    addText("Левые: " + QString::number(left.Calculate(0.5,4.5,1000)));
+    // addText("Средние: " + QString::number(average.Calculate(0.5,4.5,1000)));
+    // // addText("Левые: " + QString::number(left.Calculate(0.5,4.5,1000)));
+    // float i = 0;
+    // int k = 10;
+    // do{
+    //     i++;
+    //     diff = abs(left.Calculate(0.5,4.5,k * i) - left.Calculate(0.5,4.5,k * (i+1)));
+    // }while(diff > eps);
+    // addText("Левые: " + QString::number(left.Calculate(0.5,4.5,k * (i+1))));
 }
 
 void MainWindow::addText(QString text){

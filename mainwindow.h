@@ -26,7 +26,7 @@ private:
     Ui::MainWindow *ui;
     AverageRectangleMethod average;
     LeftRectangleMethod left;
-    float a = 0.5,b = 4.5;
+    float a = 0.5,b = 4.5,eps = 0.001,diff;
     int h;
 };
 #endif // MAINWINDOW_H
