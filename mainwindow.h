@@ -24,8 +24,6 @@ private slots:
 private:
     void addText(QString);
     Ui::MainWindow *ui;
-    AverageRectangleMethod average;
-    LeftRectangleMethod left;
     float a = 0.5,b = 4.5,eps = 0.001,diff;
     int h;
 };

@@ -4,10 +4,10 @@
 #include "Models/LeftRectangleMethod.h"
 class SimpleFactory{
 public:
-    AverageRectangleMethod* CreateRectangleMethod(){
+    static AverageRectangleMethod* CreateRectangleMethod(){
         return new AverageRectangleMethod;
     }
-    LeftRectangleMethod* CreateLeftMethod(){
+    static LeftRectangleMethod* CreateLeftMethod(){
         return new LeftRectangleMethod;
     }
 };

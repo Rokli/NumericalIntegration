@@ -11,6 +11,9 @@ public:
         }
         return sum;
     }
+    void SetName(){
+        this->name = "Левые прямоугольники:";
+    }
 };
 
 #endif // LEFTRECTANGLEMETHOD_H

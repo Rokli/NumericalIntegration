@@ -11,5 +11,8 @@ public:
         }
         return sum;
     }
+    void SetName(){
+        this->name = "Средние прямоугольники:";
+    }
 };
 #endif // AVERAGERECTANGLEMETHOD_H
