@@ -13,6 +13,7 @@ SOURCES += \
     mainwindow.cpp
 
 HEADERS += \
+    Models/AverageRectangleMethod.h \
     Models/BasisForMethods.h \
     Models/LeftRectangleMethod.h \
     mainwindow.h

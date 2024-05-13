@@ -1,6 +1,6 @@
 #ifndef LEFTRECTANGLEMETHOD_H
 #define LEFTRECTANGLEMETHOD_H
-#include "BasisForMethods.h"
+#include "Models/BasisForMethods.h"
 class LeftRectangleMethod: public BasisFormethods{
 public:
     float Calculate(float a,float b, int n){
