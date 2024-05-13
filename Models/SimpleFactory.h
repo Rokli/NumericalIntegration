@@ -10,6 +10,20 @@ public:
     static LeftRectangleMethod* CreateLeftMethod(){
         return new LeftRectangleMethod;
     }
+    static BasisFormethods* ChangeMethod(int index){
+        BasisFormethods* method;
+        switch(index){
+        case 0:
+            method = SimpleFactory::CreateLeftMethod();
+            break;
+        case 1:
+            method = SimpleFactory::CreateRectangleMethod();
+            break;
+        default:
+            break;
+        }
+        return method;
+    }
 };
 
 #endif // SIMPLEFACTORY_H

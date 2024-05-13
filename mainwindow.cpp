@@ -15,24 +15,22 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    BasisFormethods* method;
-    switch(ui->comboBox->currentIndex()){
-    case 0:
-        method = SimpleFactory::CreateLeftMethod();
-        break;
-    case 1:
-        method = SimpleFactory::CreateRectangleMethod();
-        break;
-    default:
-        break;
-    }
+    int Q;
+    BasisFormethods* method = SimpleFactory::ChangeMethod(ui->comboBox->currentIndex());
     method->SetName();
-    float i = 0;
-    int k = 10;
+    if(ui->comboBox->currentIndex() == 1)
+        Q = 1/3;
+    else
+        Q = 1;
+    int k = ui->partition->text().toFloat();
+    float a = ui->startA->text().toFloat(),b = ui->endB->text().toFloat(),
+          eps = ui->epsW->text().toFloat(),diff,i = 0;
+
     do{
         i++;
-        diff = abs(method->Calculate(0.5,4.5,k * i) - method->Calculate(0.5,4.5,k * (i+1)));
-    }while(diff > eps);
+        diff = abs(method->Calculate(a,b,k * i) - method->Calculate(a,b,k * (i+1)));
+    }while(Q * diff > eps);
+
     addText(method->name + QString::number(method->Calculate(0.5,4.5,k * (i+1))));
 }
 
